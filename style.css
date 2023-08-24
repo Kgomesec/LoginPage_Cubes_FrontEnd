@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Login;
+    src: url(../_fontes/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Login',  sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: linear-gradient(to bottom, #f1f4f9, #dff1ff); 
+}
+
+section .cor {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .cor:nth-child(1) {
+    top: -350;
+    width: 600px; 
+    height: 600px;
+    background-color: #ff359b;
+}
+
+section .cor:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: #0128d6;
+}
+
+section .cor:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: #00d2ff;
+}
+
+section .box {
+    position: relative;
+}
+
+section .box .square {
+    position: relative;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 25px 45px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 225, 225, 0.1);
+    border-radius: 10px;
+    /* animation: animate 10s linear infinite;
+    animation-delay: calc(-1s * var(--i)); */
+}
+
+section .box .square:nth-child(1) {
+    top: -10px;
+    left: 470px;
+    width: 100px;
+    height: 100px;
+    animation: animate 10.5s linear infinite;
+    /*animation-delay: 0.5s;*/
+}
+
+section .box .square:nth-child(2) {
+    top: 88px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    animation: animate02 10.3s linear infinite;
+    /*animation-delay: 0.3s;*/
+}
+
+section .box .square:nth-child(3) {
+    bottom: -110px;
+    right: -470px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    animation: animate03 10s linear infinite;
+}
+
+section .box .square:nth-child(4) {
+    bottom: -180px;
+    left: 180px;
+    width: 50px;
+    height: 50px;
+    animation: animate04 7s linear infinite;
+}
+
+section .box .square:nth-child(5) {
+    top: -375px;
+    left: 200px;
+    width: 60px;
+    height: 60px;
+    animation: animate05 9s linear infinite;
+}
+
+@keyframes animate {
+    0%, 100% {transform: translate(40px);}
+    50% {transform: translate(-30px);}
+}
+
+@keyframes animate02 {
+    0%, 100% {transform: translate(40px);}
+    50% {transform: translate(-30px);}
+} 
+
+@keyframes animate03 {
+    0%, 100% {transform: translate(40px);}
+    50% {transform: translate(-30px);}
+} 
+
+@keyframes animate04 {
+    0%, 100% {transform: translate(40px);}
+    50% {transform: translate(-30px);}
+} 
+
+@keyframes animate05 {
+    0%, 100% {transform: translate(-40px);}
+    50% {transform: translate(30px);}
+}
+
+section .interface {
+    top: 43px;
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background-color: rgba(255, 225, 225, 0.1);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+
+section .interface form {
+    position: relative;
+    padding: 40px;
+}
+
+section .interface .from h2 {
+    position: relative;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 40px;
+}
+
+section .interface .from h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: white;
+}
+
+section .interface .from .login {
+    width: 100%;
+    margin-top: 10px;
+}
+
+section .interface .from .login input {
+    background: rgba(255, 225, 225, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+section .interface .from .login input::placeholder {
+    color: white;
+}
+
+section .interface .from .login input[type="submit"] {
+    background: white;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+section .interface .from .forget {
+    margin-top: 5px;
+    color: white;
+}
+
+section .interface form .forget a {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
